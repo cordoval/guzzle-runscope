@@ -2,7 +2,7 @@
 
 <phpunit bootstrap="tests/bootstrap.php" color="true">
     <testsuites>
-        <testsuite name="runscope guzzle plugin Test Suite">
+        <testsuite name="Runscope guzzle plugin Test Suite">
             <directory>./tests</directory>
         </testsuite>
     </testsuites>

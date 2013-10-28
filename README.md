@@ -1,4 +1,4 @@
-Guzzle plugin for Runscope (guzzlephp.org)
+[Guzzle](http://guzzlephp.org) plugin for Runscope 
 
 - Requires a free Runscope account, [sign up here](https://www.runscope.com/signup)
 - Automatically create Runscope URLs for your requests
@@ -21,9 +21,13 @@ use Runscope\Plugin\RunscopePlugin;
 
 $client = new Client('https://api.github.com');
 
-$runscopePlugin = new RunscopePlugin('bucketKeyHere');
-// $runscopePlugin = new RunscopePlugin('bucketKeyHere', 'authTokenHere');
-// $runscopePlugin = new RunscopePlugin('bucketKeyHere', null, 'eu1.runscope.net');
+$runscopePlugin = new RunscopePlugin('bucket_key');
+
+// authenticated bucket
+// $runscopePlugin = new RunscopePlugin('bucket_key', 'authTokenHere');
+
+// service region
+// $runscopePlugin = new RunscopePlugin('bucket_key', null, 'eu1.runscope.net');
 
 $client->addSubscriber($runscopePlugin);
 

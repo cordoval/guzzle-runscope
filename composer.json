@@ -1,11 +1,12 @@
 {
     "name": "runscope/guzzle-plugin",
     "description": "This package adds Runscope support to the Guzzle PHP library.",
-    "homepage": "http://runscope.com",
-    "license": "Runscope License, see LICENSE for details.",
+    "homepage": "https://github.com/runscope/guzzle-runscope",
+    "license": "MIT",
     "authors": [
         {
-            "name": "Runscope Inc.",
+            "name": "Runscope",
+            "homepage": "https://www.runscope.com",
             "email": "help@runscope.com"
         },
         {

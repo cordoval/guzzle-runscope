@@ -6,13 +6,9 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Guzzle\Common\Event;
 
 /**
- * Plugin class that will transform all requests to go through runscope.
+ * Plugin class that will transform all requests to go through Runscope.
  *
- * I take inspiration in the version of the adapter for the python library
- * requests available at the following url:
- * https://github.com/Runscope/requests-runscope
- *
- * @author Luis Cordova <cordoval@gmail.com>
+ * @author Runscope <help@runscope.com>
  */
 class RunscopePlugin implements EventSubscriberInterface
 {

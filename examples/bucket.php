@@ -3,16 +3,17 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Guzzle\Http\Client;
-use Guzzle\Plugin\Log\LogPlugin;
 use Runscope\Plugin\RunscopePlugin;
 
 $client = new Client('https://api.github.com');
-$runscopePlugin = new RunscopePlugin('bucketKeyHere');
-// $runscopePlugin = new RunscopePlugin('bucketKeyHere', 'authTokenHere');
-// $runscopePlugin = new RunscopePlugin('bucketKeyHere', null, 'eu1.runscope.net');
+$runscopePlugin = new RunscopePlugin('bucket_key');
+// authenticated bucket
+// $runscopePlugin = new RunscopePlugin('bucket_key', 'auth_token');
+
+// service region
+// $runscopePlugin = new RunscopePlugin('bucket_key', null, 'eu1.runscope.net');
 
 $client->addSubscriber($runscopePlugin);
-$client->addSubscriber(LogPlugin::getDebugPlugin()); // just to easy debug
 
 // Send the request and get the response
 $request = $client->get('/');
