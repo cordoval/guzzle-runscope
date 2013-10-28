@@ -7,11 +7,13 @@
 
 Install by issuing:
 
+```cli
     ~ composer require runscope/guzzle-plugin
+```
 
 Usage is as follows:
 
-```
+```php
 <?php
 require __DIR__ . '/../vendor/autoload.php';
 
