@@ -7,7 +7,7 @@
 
 Install by issuing:
 
-~ composer require runscope/guzzle-plugin
+    ~ composer require runscope/guzzle-plugin
 
 Usage is as follows:
 
