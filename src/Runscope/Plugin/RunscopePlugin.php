@@ -133,17 +133,16 @@ class RunscopePlugin implements EventSubscriberInterface
     private function http_build_url($url = null, $parts = array(), $flags = self::HTTP_URL_REPLACE, &$new_url = false) {
         $keys = array('user', 'pass', 'port', 'path', 'query', 'fragment');
 
-        // HTTP_URL_STRIP_ALL becomes all the HTTP_URL_STRIP_Xs
         if ($flags & self::HTTP_URL_STRIP_ALL) {
+            // HTTP_URL_STRIP_ALL becomes all the HTTP_URL_STRIP_Xs
             $flags |= self::HTTP_URL_STRIP_USER;
             $flags |= self::HTTP_URL_STRIP_PASS;
             $flags |= self::HTTP_URL_STRIP_PORT;
             $flags |= self::HTTP_URL_STRIP_PATH;
             $flags |= self::HTTP_URL_STRIP_QUERY;
             $flags |= self::HTTP_URL_STRIP_FRAGMENT;
-        }
-        // HTTP_URL_STRIP_AUTH becomes HTTP_URL_STRIP_USER and HTTP_URL_STRIP_PASS
-        elseif ($flags & self::HTTP_URL_STRIP_AUTH) {
+        } elseif ($flags & self::HTTP_URL_STRIP_AUTH) {
+            // HTTP_URL_STRIP_AUTH becomes HTTP_URL_STRIP_USER and HTTP_URL_STRIP_PASS
             $flags |= self::HTTP_URL_STRIP_USER;
             $flags |= self::HTTP_URL_STRIP_PASS;
         }
@@ -174,8 +173,7 @@ class RunscopePlugin implements EventSubscriberInterface
             if (isset($parts['path']) && ($flags & self::HTTP_URL_JOIN_PATH)) {
                 if (isset($parse_url['path'])) {
                     $parse_url['path'] = rtrim(str_replace(basename($parse_url['path']), '', $parse_url['path']), '/') . '/' . ltrim($parts['path'], '/');
-                }
-                else {
+                } else {
                     $parse_url['path'] = $parts['path'];
                 }
             }
@@ -184,8 +182,7 @@ class RunscopePlugin implements EventSubscriberInterface
             if (isset($parts['query']) && ($flags & self::HTTP_URL_JOIN_QUERY)) {
                 if (isset($parse_url['query'])) {
                     $parse_url['query'] .= '&' . $parts['query'];
-                }
-                else {
+                } else {
                     $parse_url['query'] = $parts['query'];
                 }
             }
