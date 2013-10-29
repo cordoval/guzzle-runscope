@@ -18,7 +18,6 @@ Usage is as follows:
 require __DIR__ . '/../vendor/autoload.php';
 
 use Guzzle\Http\Client;
-use Guzzle\Plugin\Log\LogPlugin;
 use Runscope\Plugin\RunscopePlugin;
 
 $client = new Client('https://api.github.com');
